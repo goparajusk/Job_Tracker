@@ -15,6 +15,10 @@ const style = {
   },
 };
 
+const backcover = {
+  backgroundColor: '#859491',
+}
+
 export default function JobDetailsTablePage() {
   const [jobinfo, setJobinfo] = useState([]);
   const [searchTerm, setSearchTerm] = useState(''); // State for search term
@@ -69,17 +73,18 @@ export default function JobDetailsTablePage() {
   );
 
   return (
-    <Box border={'1px solid #333'}>
+    <Box border={'1px solid #333'}
+    sx={backcover}>
       <Box
         width="100vw"
         height="100px"
-        bgcolor={'#ADD8E6'}
+        bgcolor={'#859491'}
         display={'flex'}
         justifyContent={'center'}
         alignItems={'center'}
       >
         <Typography variant={'h2'} color={'#333'} textAlign={'center'}>
-          Job Info
+          Job Information
         </Typography>
       </Box>
 
@@ -89,6 +94,7 @@ export default function JobDetailsTablePage() {
         justifyContent="center" 
         alignItems="center"
         margin="16px"
+        sx={{color:'#ebeded',bgcolor:'#e0e0e0'}}
       >
         <TextField
           variant="outlined"
@@ -100,7 +106,7 @@ export default function JobDetailsTablePage() {
       </Box>
 
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 450 }} aria-label="job details table">
+        <Table sx={{ minWidth: 450,color:'#ebeded',bgcolor:'#dae6e3' }} aria-label="job details table">
           <TableHead>
             <TableRow>
               <TableCell>Company Name</TableCell>
@@ -116,7 +122,9 @@ export default function JobDetailsTablePage() {
             {filteredJobInfo.map(({ name, companyName, role, doa, appliedThrough, description, jobType }) => (
               <TableRow
                 key={name}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx={{
+                  '&:last-child td, &:last-child th': { border: 0 },
+                color:'#ebeded',bgcolor:'#dae6e3'}}
               >
                 <TableCell component="th" scope="row">
                   {companyName}

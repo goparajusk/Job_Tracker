@@ -8,15 +8,6 @@ import { firestore, storage } from '@/firebase'
 import Link from 'next/link';
 
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper
-} from '@mui/material';
-import {
   collection,
   doc,
   getDocs,
