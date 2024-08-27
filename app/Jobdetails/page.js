@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import { Box, Stack, Typography, Button, TextField, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Box, Typography, Button, TextField, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { firestore } from '@/firebase';
 import Link from "next/link";
 import { collection, doc, getDocs, query, deleteDoc, getDoc } from 'firebase/firestore';
